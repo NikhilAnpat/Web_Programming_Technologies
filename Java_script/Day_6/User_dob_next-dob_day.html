@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function f2()
+    {
+        let dob=new Date(document.getElementById("i1").value)
+        dob.getFullYear(2023)
+
+        switch(dob.getDay())
+        {
+            
+                case 0: document.getElementById("p1").innerHTML="<h1>Sunday</h1>"
+                        break;
+
+                case 1: document.getElementById("p1").innerHTML="<h1>Monday</h1>"
+                        break;  
+                                    
+                case 2: document.getElementById("p1").innerHTML="<h1>Tuesday</h1>"
+                        break;  
+
+                case 3: document.getElementById("p1").innerHTML="<h1>wednesday</h1>"
+                        break;    
+                        
+                case 4: document.getElementById("p1").innerHTML="<h1>Thursday</h1>"
+                        break;
+
+                case 5: document.getElementById("p1").innerHTML="<h1>Friday</h1>"
+                        break;
+                case 6: document.getElementById("p1").innerHTML="<h1>Saturday</h1>"
+                        break;
+                        
+            
+        }
+    }  
+  </script>
+</head>
+<body>
+        <pre>
+            <input type="date" id="i1" onchange="f2()"/>
+            <p id="p1"></p>
+        </pre>
+</body>
+</html>
