@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let arr=[]
+        function pinfo(pname,page)
+        {
+            this.name=pname
+            this.age=page
+        }
+        function insertedetails()
+        {
+            let n1=document.getElementById("i1").value
+            let n2=parseFloat(document.getElementById("i2").value)
+
+            arr.push(new pinfo(n1,n2))
+        }
+        function showdetails()
+        {
+            for(let i=0;i<arr.length;i++)
+            {
+                document.getElementById("p1").innerHTML=
+                document.getElementById("p1").innerHTML+" "+
+               `<br>`+"Person name: "+ arr[i].name+ " "+
+               `<br>`+"Person age ; "+arr[i].age
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="i1" placeholder="Name">
+    <input type="number" id="i2" placeholder="Age">
+    <button id="i1" onclick="insertedetails()">Inserte</button>
+
+    <button onclick="showdetails()" > show</button>
+    <p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+        let pro=[]
+
+        function productinfo(pname,pcost,pdesc)
+        {
+            this.productname=pname
+            this.productcost=pcost
+            this.productdescription=pdesc
+        }
+
+        function inserteinfo()
+        {
+          let  n1=document.getElementById("i1").value
+          let  n2=parseInt(document.getElementById("i2").value)
+          let  n3=document.getElementById("i3").value
+
+            // console.log(n)
+             pro.push(new productinfo(n1,n2,n3))
+            
+            // document.getElementById("p1").innerText=pro
+        }
+
+        function showproduct()
+        {
+            for(let i=0;i<pro.length;i++)
+            {
+                document.getElementById("p1").innerHTML= 
+                document.getElementById("p1").innerHTML+" "+`<br>`
+                +" Book name: "+pro[i].productname
+                +  `<br>`+" Book cost: " + pro[i].productcost
+                + `<br>`+" product desc: "+pro[i].productdescription
+            }
+                
+
+        }
+    </script>
+</head>
+
+
+<body>
+    <input type="text" id="i1" placeholder="product name">
+    <input type="number" id="i2" placeholder="product cost">
+    <input type="text" id="i3" placeholder="product desc">
+    <button id="i1" onclick="inserteinfo()" >Inserte</button>
+    
+    <br>
+    <button  onclick="showproduct()">show</button>
+    <p id="p1"></p>
+</body>
+</html>
