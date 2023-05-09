@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="C:\Users\IET\Downloads\jquery-3.6.4.min.js">
+
+    </script>
+    <script>
+        $(document).ready(()=>
+        { $("button").click(()=>
+         {
+let sum=1;
+          let v=$("#12").val()
+          
+        for( let i=1;i<=v;i++)  
+        {
+           sum*=i;
+        }
+        $("p").html(sum)
+        } )
+        }
+        )
+    </script>
+
+</head>
+<body>
+    <input type="number" id="12">
+    <button id="c"> here</button>
+    <p></p>
+</body>
+</html>

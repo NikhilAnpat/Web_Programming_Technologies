@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, tr, td {
+  border: 1px solid black;
+}
+    </style>
+    <script src="C:\Users\IET\Downloads\jquery-3.6.4.min.js"></script>
+    <script>
+        $().ready(()=>{ $("#ky").click(()=>
+        {
+            let num=$("#i1").val()
+            let from= $("#i11").val()
+            let to=$("#i111").val()
+            let str1=''
+   let str2=''
+   let res=0;
+            for(let i=from ;i<=to;i++ )
+        { res=num*i
+          str1+=`${num} * ${i}`+"<br>"
+          str2+=`${res}`+"<br>"
+        }
+        $("#12").html(str1)
+        $("#13").html(str2)
+        })
+
+
+
+    })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="num" id="i1">
+    
+    <input type="number" placeholder="from" id="i11">
+    <input type="number" placeholder="to" id="i111">
+    <input type="button" value="click" id="ky">
+ <table style="border:solid 6px red" border=1>
+    <thead>
+        <tr><td>num * x</td>
+        <td>ans </td></tr>
+    </thead>
+    <tbody>
+        <tr border="solid"><td id="12"></td>
+       <td id="13"> </td></tr>
+       
+    </tbody>
+ </table>
+
+</body>
+</html>
