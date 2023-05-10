@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="C:\Users\IET\jquery-3.6.4.js"></script>
+
+  <script>
+    $().ready(()=>{
+        $("#i1").click(()=>{
+
+            let x=new Date()
+            let output=x.getHours()+":"+x.getMinutes()+":"+x.getSeconds()
+            $("#i2").val(output)
+
+        })
+    })
+  </script>
+</head>
+<body>
+    <input type="button" id="i1" value="show time">
+    <input type="text" id="i2">
+</body>
+</html> 

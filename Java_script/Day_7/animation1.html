@@ -1,0 +1,39 @@
+<html>
+    <head> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $(":button").click(()=>{
+
+            $("#d1").animate({left: '250px'},"fast")
+            var div = $("#d1");
+  div.animate({height: '300px'}, "fast");//upper to lower
+  div.animate({width: '300px'}, "fast");
+  div.animate({height: '100px'}, "fast");//lower to upper
+  div.animate({width: '100px'}, "fast");
+
+  div.animate({height: '300px'}, "fast");//upper to lower
+  div.animate({width: '300px'}, "fast");
+  div.animate({height: '100px'}, "fast");//lower to upper
+  div.animate({width: '100px'}, "fast");
+
+  div.animate({height: '300px'}, "fast");//upper to lower
+  div.animate({width: '300px'}, "fast");
+  div.animate({height: '100px'}, "fast");//lower to upper
+  div.animate({width: '100px'}, "fast");
+  
+
+             })
+      })
+    </script>
+    </head>
+   
+    <body>
+        <div id="d1" style="position:absolute; border: 5px;height: 20px;width: 20px;background-color: blueviolet;">
+        
+        </div>
+        <br>
+        <br>
+        <p>   <input type="button" value="start moving" /> </p>
+    </body>
+</html>

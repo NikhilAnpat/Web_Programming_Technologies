@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Fact</title>
+    <script src="C:\Users\IET\jquery-3.6.4.js">
+
+    </script>
+
+    <script>
+                $().ready(()=>{
+             //   console.log("hi")
+                $("#i1").change(()=>{
+                    let s= $("#i1").val()
+              //      console.log(s)
+                    let res=1
+                    for(let i=1;i<=s;i++)
+                    {
+                        res=res*i
+                    }
+                  //  console.log(res)
+
+                    $("#p1").html(res)
+                
+                })
+        })
+    </script>
+</head>
+<body>
+    <input type="number" id="i1" >
+    <button id="i1">show</button>
+    <p id="p1"></p>
+</body>
+</html>
