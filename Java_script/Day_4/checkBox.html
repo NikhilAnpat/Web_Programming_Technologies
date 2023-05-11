@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+                let e=document.getElementById("c1")
+
+                if(e.checked)
+                {
+                    document.getElementById("i1").readOnly=true
+                }
+                else
+                {
+                    document.getElementById("i1").readOnly=false
+                }
+            }
+        </script>
+
+        <body>
+            <input type="text" id="i1"/>
+            <label for="c1">Check_box</label>
+            <input type="checkbox" id="c1" onchange="f1()"/>
+     
+
+        </body>
+    </head>
+</html>
