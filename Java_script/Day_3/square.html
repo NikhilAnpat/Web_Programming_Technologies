@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function f5()
+            {
+                let n1=document.getElementById("num1").value
+                let square=parseInt(n1)*parseInt(n1)
+                document.getElementById("p1").innerHTML=`${square}`
+            }
+        </script>
+
+        <body>
+            <input type="number" id="num1"/>
+            <button onclick="f5()">square</button>
+            <p id="p1"></p>
+
+        </body>
+    </head>
+</html>
