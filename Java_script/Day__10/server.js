@@ -1,14 +1,29 @@
-import express  from "express";
-let app=express();
-//importing 
-import pahune from "./guest.js";
+import express from "express"
 
-app.use("/guest",pahune);
+let app = express()
 
-app.get('/',(req,res)=>{
-    return res.send("Welcome To Goa Singham")
+// app.get('/',(req,res)=>
+// {
+//     return res.send("ok")
+// })
+
+app.post("/postit" ,(req,res)=>
+{
+    return res.send("Welcome post")
 })
 
-app.listen('1001',()=>{
-    console.log("Server is running on PORT 1001")
+app.put("/putit",(req,res)=>
+{
+return res.send("welcome put")
 })
+
+app.delete("/delteit" ,(req,res)=>
+{
+    
+return res.send("welcome delete")})
+
+app.listen(2002,()=>{
+    console.log("Hello express")
+})
+
+
