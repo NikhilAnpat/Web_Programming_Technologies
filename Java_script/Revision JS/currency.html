@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <script>
+        function f1(){
+            
+            let currency=document.getElementById("i1").value
+            let s1=document.getElementById("s1").value
+            let s2=document.getElementById("s2").value
+            
+            let res=0
+            if(s1=="rs" && s2=="dollar"){
+                res=currency*0.080
+            }
+
+            document.getElementById("p1").innerText=`${res}`
+
+
+
+        }
+    </script>
+</head>
+<body>
+        <input type="number" name="" id="i1">
+        
+        From:<select name="curr" id="s1">
+            <option value="">select</option>
+        <option value="rs">&#8377</option>
+        <option value="dollar">$</option>
+    </select>
+        To: <select name="curr" id="s2">
+            <option value="">select</option>
+            <option value="dollar">$</option>
+            <option value="rs">&#8377</option>
+        </select>
+        <button onclick="f1()">convert</button>
+        <p id="p1"></p>
+</body>
+</html>

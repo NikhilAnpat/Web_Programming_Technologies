@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+function f1(){
+
+        let num=parseInt(document.getElementById("i1").value)
+        let from=parseInt(document.getElementById("i2").value)
+        let to=parseInt(document.getElementById("i3").value)
+        let result
+        
+
+    for(let i=from;i<=to;i++){
+            result=num*i
+            console.log(result)
+        
+document.getElementById("d1").innerHTML += `<tr><td>${num}*${i}</td><td>${result}</td></tr>`;
+
+    }
+    
+}
+
+
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="i1" value="num1" placeholder="number">
+    <input type="number" value="from " placeholder="from" id="i2">
+    <input type="number" value="to" placeholder="to" id="i3">
+    <button onclick="f1()">show-table</button>
+    <p id="p1"></p>
+    
+    <table border=1>
+        <thead>
+            <tr>
+                <td>num*i</td>
+                <td>result</td>
+            </tr>
+        </thead>
+        <tbody id="d1">
+            
+
+            
+        </tbody>
+    </table>
+
+</body>
+</html>

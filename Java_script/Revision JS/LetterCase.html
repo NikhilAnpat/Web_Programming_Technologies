@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function f1()
+        {
+            let name=document.getElementById("i1").value
+            document.getElementById("p1").innerText=name.toUpperCase()
+        }
+
+        function f2()
+        {
+            let name=document.getElementById("i1").value
+            document.getElementById("p1").innerText=name.toLowerCase()
+        }
+        
+        function f3()
+        {
+            let name=document.getElementById("i1").value
+            document.getElementById("p1").innerText=name.charAt(0).toUpperCase().concat(name.substring(1).toLowerCase())
+        }
+        
+    </script>
+    
+</head>
+<body>
+
+
+    <div style="border-style: dotted;width: fit-content;margin-left: 50%;" >
+    <a style="text-align: center;" href="./Cal.html">click here </a>
+</div>
+
+
+
+
+
+
+    <div style="border-style:solid ;width: fit-content;" >
+        <input type="text" id="i1" />
+
+        <br>
+        Upper-Case:<input type="radio" name="same" id="t1"  onchange="f1()"/>
+        <br>
+        Lower-case:<input type="radio" name="same" id="t2" onchange="f2()"/>
+        <br>
+        Title-Case:<input type="radio" name="same" id="t3" onchange="f3 ()"/>
+
+        <p id="p1" ></p>
+    </div>
+        <!-- <p id="p2" ></p>
+        <p id="p3" ></p> -->
+
+        <iframe src="./Table.html" border="" height="400px" width="400px"></iframe>
+        <iframe src="./Factorial.html" border="" height="400px" width="400px" ></iframe>
+
+
+
+
+        
+        
+        
+        
+        
+
+</body>
+</html>
