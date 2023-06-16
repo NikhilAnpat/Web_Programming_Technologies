@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Text Field and Button</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+	<label for="textInput">Type Something:</label>
+	<input type="text" id="textInput">
+
+	<button id="submitBtn">Submit</button>
+
+	<p id="output"></p>
+
+	<script>
+		$(document).ready(function() {
+		
+			$("#submitBtn").click(function() {
+	
+				var inputText = $("#textInput").val();
+				// reverse text and display in output
+				var reversedText = inputText.split("").reverse().join("");
+				$("#output").text(reversedText);
+			});
+		});
+	</script>
+
+</body>
+</html>
+
