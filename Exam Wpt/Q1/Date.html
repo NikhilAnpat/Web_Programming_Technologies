@@ -1,0 +1,30 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+	
+	<script>
+		function updateDate()
+		 {
+			var D = document.getElementById("dateField").value;
+			
+			document.getElementById("selectedDate").innerHTML = "You selected: " + D;
+		}
+	</script>
+</head>
+<body>
+
+	<label for="dateField">Select a date:</label>
+
+	<input type="date" id="dateField" onchange="updateDate()">
+	<p id="selectedDate"></p>
+	
+	<script>
+		var today = new Date();
+
+		var todayFormatted = today.toISOString().slice(0,10);
+
+		document.getElementById("selectedDate").innerHTML = "Today's date is: " + todayFormatted;
+	</script>
+</body>
+</html>
