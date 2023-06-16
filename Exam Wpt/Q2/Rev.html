@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+	<label for="textInput">Type String:</label>
+	<input type="text" id="textInput">
+
+	<button id="i2">Submit</button>
+
+	<p id="output"></p>
+
+	<script>
+		$(document).ready(function() {
+		
+			$("#i2").click(function() {
+	
+				var inputText = $("#textInput").val();
+				// reverse text and display in output
+				var reversedText = inputText.split("").reverse().join("");
+				$("#output").text(reversedText);
+			});
+		});
+	</script>
+
+</body>
+</html>
+
